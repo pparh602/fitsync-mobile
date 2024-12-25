@@ -1,0 +1,23 @@
+{
+  "id": "d66ac3cc-893e-4260-86be-ed8a0222ce4b",
+  "username": "pspatel602",
+  "email": "pspatel602@gmail.com",
+  "full_name": "Parth Patel",
+  "description": "23  | Software Engineer | Chasing power and aesthetic\n____________\n180 cm | 75 kg",
+  "profile_pic": "https://d2l9nsnmtah87f.cloudfront.net/profile-images/pspatel602-d2e87b90-7120-45a5-b4b0-690871793eba.jpg",
+  "is_strava_connected": false,
+  "likes_push_enabled": true,
+  "follows_push_enabled": true,
+  "comments_push_enabled": true,
+  "comment_mention_push_enabled": true,
+  "comment_discussion_push_enabled": true,
+  "private_profile": false,
+  "created_at": "2022-11-17T05:00:39.722Z",
+  "last_workout_at": "2024-10-19T13:47:48.281Z",
+  "accepted_terms_and_conditions": true,
+  "is_coached": false,
+  "is_a_coach": true,
+  "coach_status": "coach-inactive-plan",
+  "sex": "male",
+  "email_consent": true
+}

@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "10879148314",
+    "project_id": "fit-sync-9d598",
+    "storage_bucket": "fit-sync-9d598.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10879148314:android:1e208b817297ca442a4ca3",
+        "android_client_info": {
+          "package_name": "com.parth.fitsync"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10879148314-rkdu6hqeqnvklhov1q0r391h4ea9hkae.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.parth.fitsync",
+            "certificate_hash": "e817ba78dee11123a7a931aec3aa804ed05d9ce6"
+          }
+        },
+        {
+          "client_id": "10879148314-ur6phd31niovm1fl4jfn34l3pfrrhbe3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBuSoeu131KK8iJGma62WjGwX3FY05Gy0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10879148314-ur6phd31niovm1fl4jfn34l3pfrrhbe3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "10879148314-crguivcpqr9vhu57vt1na66sbmpjf2be.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.parth.fitsync"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

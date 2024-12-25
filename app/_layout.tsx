@@ -1,37 +1,45 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { useEffect } from 'react';
-import 'react-native-reanimated';
+import { Stack } from "expo-router/stack";
+import { QueryClientProvider } from "react-query";
+import queryClient from "./(service)/queryClient";
+import AppWrapper from "./(redux)/AppWrapper";
+import {
+  configureFonts,
+  DefaultTheme,
+  PaperProvider,
+} from "react-native-paper";
+import { Provider } from "react-redux";
+import { store } from "./(redux)/store";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
-import { useColorScheme } from '@/hooks/useColorScheme';
+const fontConfig = {
+  titleSmall: {
+    letterSpacing: 0.101,
+  },
+  labelLarge: {
+    letterSpacing: 0.101,
+  },
+};
 
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
+const theme = {
+  ...DefaultTheme,
+  // Specify custom property
+  myOwnProperty: true,
+  fonts: configureFonts({ config: fontConfig, isV3: true }),
+  // Specify custom property in nested object
+  colors: {
+    ...DefaultTheme.colors,
+    myOwnColor: "#BADA55",
+  },
+};
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
-
-  useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded]);
-
-  if (!loaded) {
-    return null;
-  }
-
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-    </ThemeProvider>
+    <PaperProvider theme={theme}>
+      <Provider store={store}>
+        <QueryClientProvider client={queryClient}>
+          <AppWrapper />
+        </QueryClientProvider>
+      </Provider>
+    </PaperProvider>
   );
 }
